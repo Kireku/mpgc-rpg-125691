@@ -7,7 +7,7 @@ public abstract class GameCharacter {
     private final Stats stats;
     protected GameCharacter(String name, Stats stats) {
         if (name == null || name.isBlank()) {
-            throw new NullPointerException("name cannot be empty");
+            throw new IllegalArgumentException("name cannot be empty");
         }
 
         this.name = name;
@@ -26,7 +26,7 @@ public abstract class GameCharacter {
         return stats.isAlive();
     }
 
-    public void reciveDamage(int amount) {
+    public void receiveDamage(int amount) {
         stats.takeDamage(amount);
     }
 
