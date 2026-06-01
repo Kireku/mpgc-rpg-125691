@@ -1,0 +1,78 @@
+{
+  "player": {
+    "characterClass": "MAGE",
+    "inventory": {
+      "items": []
+    },
+    "level": 2,
+    "experience": 185,
+    "gold": 190,
+    "name": "Frango",
+    "stats": {
+      "maxHealth": 85,
+      "currentHealth": 41,
+      "attack": 24,
+      "defense": 4,
+      "speed": 9
+    }
+  },
+  "quests": [
+    {
+      "title": "First Hunt",
+      "description": "Defeat the slime near the village",
+      "enemy": {
+        "experienceReward": 20,
+        "goldReward": 10,
+        "name": "Slime",
+        "stats": {
+          "maxHealth": 30,
+          "currentHealth": 0,
+          "attack": 6,
+          "defense": 2,
+          "speed": 2
+        }
+      },
+      "goldReward": 15,
+      "experienceReward": 25,
+      "status": "COMPLETED"
+    },
+    {
+      "title": "Danger in the Woods",
+      "description": "A wolf is threatening the forest path.",
+      "enemy": {
+        "experienceReward": 40,
+        "goldReward": 25,
+        "name": "Forest Wolf",
+        "stats": {
+          "maxHealth": 55,
+          "currentHealth": 0,
+          "attack": 12,
+          "defense": 4,
+          "speed": 7
+        }
+      },
+      "goldReward": 35,
+      "experienceReward": 50,
+      "status": "COMPLETED"
+    },
+    {
+      "title": "Road Ambush",
+      "description": "Defeat the bandit blocking the trade road.",
+      "enemy": {
+        "experienceReward": 70,
+        "goldReward": 45,
+        "name": "Bandit",
+        "stats": {
+          "maxHealth": 75,
+          "currentHealth": 0,
+          "attack": 15,
+          "defense": 6,
+          "speed": 5
+        }
+      },
+      "goldReward": 60,
+      "experienceReward": 80,
+      "status": "COMPLETED"
+    }
+  ]
+}

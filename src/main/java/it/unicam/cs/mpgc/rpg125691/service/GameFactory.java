@@ -20,6 +20,7 @@ public class GameFactory {
         }
 
         PlayerCharacter player = new PlayerCharacter(playerName, characterClass, createStatsForClass(characterClass));
+        addinitialItems(player);
         GameState gameState = new GameState(player);
         addInitialQuests(gameState);
 

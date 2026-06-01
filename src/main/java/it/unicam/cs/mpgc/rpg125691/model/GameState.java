@@ -20,10 +20,6 @@ public class GameState {
         return player;
     }
 
-    public void setPlayer(PlayerCharacter player) {
-        this.player = Objects.requireNonNull(player, "Player must not be null.");
-    }
-
     public void addQuest(Quest quest) {
         quests.add(Objects.requireNonNull(quest, "Quest cannot be null."));
     }
