@@ -1,6 +1,7 @@
 package it.unicam.cs.mpgc.rpg125691.view;
 
 import it.unicam.cs.mpgc.rpg125691.model.BattleAction;
+import it.unicam.cs.mpgc.rpg125691.model.PlayerCharacter;
 import it.unicam.cs.mpgc.rpg125691.model.Quest;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -11,19 +12,25 @@ import javafx.scene.layout.VBox;
 
 import java.util.function.Consumer;
 
+
 public class BattleView {
+
     private final VBox root;
 
-    public BattleView(Quest activeQuest, Consumer<BattleAction> onBattleAction) {
+    public BattleView(PlayerCharacter player, Quest activeQuest, Consumer<BattleAction> onBattleAction) {
         this.root = new VBox(10);
         this.root.setPadding(new Insets(15));
 
-        if(activeQuest == null){
-            root.getChildren().add(new Label("No quest active"));
+        if (activeQuest == null) {
+            root.getChildren().add(new Label("No active quest. Choose a quest first."));
             return;
         }
 
         Label title = new Label("Battle");
+
+        Label playerName = new Label("Player: " + player.getName());
+        Label playerStats = new Label("Player stats: " + player.getStats());
+
         Label enemyName = new Label("Enemy: " + activeQuest.getEnemy().getName());
         Label enemyStats = new Label("Enemy stats: " + activeQuest.getEnemy().getStats());
 
@@ -34,21 +41,16 @@ public class BattleView {
 
         HBox actions = new HBox(10, attackButton, defendButton, potionButton, escapeButton);
 
-        root.getChildren().addAll(title, enemyName, enemyStats, actions);
+        root.getChildren().addAll(title, playerName, playerStats, enemyName, enemyStats, actions);
     }
 
     public Node getRoot() {
         return root;
     }
 
-    private Button createActionButton(
-            String text,
-            BattleAction action,
-            Consumer<BattleAction> onBattleAction
-    ) {
+    private Button createActionButton(String text, BattleAction action, Consumer<BattleAction> onBattleAction) {
         Button button = new Button(text);
         button.setOnAction(event -> onBattleAction.accept(action));
         return button;
     }
 }
-

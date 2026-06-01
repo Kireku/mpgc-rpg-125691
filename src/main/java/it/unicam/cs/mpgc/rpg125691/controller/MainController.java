@@ -109,7 +109,7 @@ public class MainController {
         try {
             gameService.startQuest(quest);
             mainView.appendLog("Quest started: " + quest.getTitle());
-            mainView.showBattle(gameService.getActiveQuest());
+            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
         } catch (IllegalStateException e) {
             mainView.appendLog(e.getMessage());
         }
@@ -117,7 +117,7 @@ public class MainController {
 
     public void handleShowBattle() {
         try {
-            mainView.showBattle(gameService.getActiveQuest());
+            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
         } catch (IllegalStateException e) {
             mainView.appendLog("Start or load a game first.");
         }
@@ -146,7 +146,7 @@ public class MainController {
                 return;
             }
 
-            mainView.showBattle(gameService.getActiveQuest());
+            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
         } catch (IllegalStateException e) {
             mainView.appendLog(e.getMessage());
         }

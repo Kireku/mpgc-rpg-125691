@@ -62,5 +62,14 @@ public class Quest {
         }
         status = QuestStatus.COMPLETED;
     }
+
+    public void cancel() {
+        if(status != QuestStatus.IN_PROGRESS) {
+            throw new IllegalStateException("Only in-progress quests can be cancelled.");
+        }
+
+        status = QuestStatus.AVAILABLE;
+        enemy.getStats().restoreFullHealth();
+    }
 }
 

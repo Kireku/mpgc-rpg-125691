@@ -1,19 +1,32 @@
 {
   "player": {
-    "characterClass": "MAGE",
+    "characterClass": "WARRIOR",
     "inventory": {
-      "items": []
+      "items": [
+        {
+          "name": "Potion",
+          "description": "restore a small amount of health",
+          "type": "CONSUMABLE",
+          "value": 10
+        },
+        {
+          "name": "Potion",
+          "description": "restore a small amount of health",
+          "type": "CONSUMABLE",
+          "value": 10
+        }
+      ]
     },
-    "level": 2,
-    "experience": 185,
-    "gold": 190,
-    "name": "Frango",
+    "level": 1,
+    "experience": 0,
+    "gold": 0,
+    "name": "A",
     "stats": {
-      "maxHealth": 85,
-      "currentHealth": 41,
-      "attack": 24,
-      "defense": 4,
-      "speed": 9
+      "maxHealth": 120,
+      "currentHealth": 120,
+      "attack": 18,
+      "defense": 8,
+      "speed": 4
     }
   },
   "quests": [
@@ -26,7 +39,7 @@
         "name": "Slime",
         "stats": {
           "maxHealth": 30,
-          "currentHealth": 0,
+          "currentHealth": 30,
           "attack": 6,
           "defense": 2,
           "speed": 2
@@ -34,7 +47,7 @@
       },
       "goldReward": 15,
       "experienceReward": 25,
-      "status": "COMPLETED"
+      "status": "AVAILABLE"
     },
     {
       "title": "Danger in the Woods",
@@ -45,7 +58,7 @@
         "name": "Forest Wolf",
         "stats": {
           "maxHealth": 55,
-          "currentHealth": 0,
+          "currentHealth": 55,
           "attack": 12,
           "defense": 4,
           "speed": 7
@@ -53,7 +66,7 @@
       },
       "goldReward": 35,
       "experienceReward": 50,
-      "status": "COMPLETED"
+      "status": "AVAILABLE"
     },
     {
       "title": "Road Ambush",
@@ -64,7 +77,7 @@
         "name": "Bandit",
         "stats": {
           "maxHealth": 75,
-          "currentHealth": 0,
+          "currentHealth": 75,
           "attack": 15,
           "defense": 6,
           "speed": 5
@@ -72,7 +85,7 @@
       },
       "goldReward": 60,
       "experienceReward": 80,
-      "status": "COMPLETED"
+      "status": "AVAILABLE"
     }
   ]
 }

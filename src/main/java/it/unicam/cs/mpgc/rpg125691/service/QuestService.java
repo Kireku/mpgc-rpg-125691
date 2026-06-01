@@ -27,4 +27,11 @@ public class QuestService {
         player.addGold(quest.getGoldReward());
         player.addExperience(quest.getExperienceReward());
     }
+
+    public void cancelQuest(Quest quest) {
+        if (quest == null) {
+            throw new IllegalArgumentException("quest cannot be null");
+        }
+        quest.cancel();
+    }
 }

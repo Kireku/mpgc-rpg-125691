@@ -111,6 +111,7 @@ public class GameService {
 
         if (result.getBattleResult() == BattleResult.ESCAPED ||
                 result.getBattleResult() == BattleResult.PLAYER_LOSE) {
+            questService.cancelQuest(activeQuest);
             activeQuest = null;
         }
 

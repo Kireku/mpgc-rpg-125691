@@ -115,8 +115,8 @@ public class MainView {
         setContent(new QuestView(quests, controller::handleStartQuest).getRoot());
     }
 
-    public void showBattle(Quest activeQuest) {
-        setContent(new BattleView(activeQuest, controller::handleBattleAction).getRoot());
+    public void showBattle(PlayerCharacter player, Quest activeQuest) {
+        setContent(new BattleView(player, activeQuest, controller::handleBattleAction).getRoot());
     }
 
     public void appendLog(String message) {
