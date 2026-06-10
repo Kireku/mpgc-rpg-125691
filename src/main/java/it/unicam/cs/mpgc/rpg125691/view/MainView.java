@@ -48,7 +48,7 @@ public class MainView {
     private void configureLayout() {
         root.setPadding(new Insets(15));
         contentBox.setPadding(new Insets(15));
-
+        contentBox.getStyleClass().add("content-panel");
         MenuView menuView = new MenuView(
                 controller::handleNewGame,
                 controller::handleLoadGame,
@@ -62,6 +62,7 @@ public class MainView {
         root.setLeft(menuView.getRoot());
         root.setCenter(contentBox);
         root.setBottom(logView.getRoot());
+
     }
 
     public void showWelcomeView() {

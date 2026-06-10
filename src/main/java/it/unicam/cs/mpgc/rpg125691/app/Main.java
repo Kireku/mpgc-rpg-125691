@@ -13,9 +13,7 @@ import javafx.stage.Stage;
 
 import java.nio.file.Path;
 
-/**
- * Application entry point.
- */
+
 public class Main extends Application {
 
     @Override
@@ -32,6 +30,7 @@ public class Main extends Application {
         mainController.setMainView(mainView);
 
         Scene scene = new Scene(mainView.getRoot(), 1000, 650);
+        scene.getStylesheets().add(getClass().getResource("/styles/main.css").toExternalForm());
 
         stage.setTitle("RPG Quest Manager");
         stage.setScene(scene);

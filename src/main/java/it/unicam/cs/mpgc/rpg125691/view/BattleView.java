@@ -27,6 +27,7 @@ public class BattleView {
         }
 
         Label title = new Label("Battle");
+        title.getStyleClass().add("section-title");
 
         Label playerName = new Label("Player: " + player.getName());
         Label playerStats = new Label("Player stats: " + player.getStats());

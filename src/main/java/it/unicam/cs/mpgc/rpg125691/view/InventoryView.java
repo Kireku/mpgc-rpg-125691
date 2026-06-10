@@ -15,7 +15,10 @@ public class InventoryView {
         this.root = new VBox(10);
         this.root.setPadding(new Insets(15));
 
-        root.getChildren().add(new Label("Inventory"));
+        Label title = new Label("Inventory");
+        title.getStyleClass().add("section-title");
+
+        root.getChildren().add(title);
 
         if(inventory.isEmpty()){
             root.getChildren().add(new Label("No Items in Inventory"));

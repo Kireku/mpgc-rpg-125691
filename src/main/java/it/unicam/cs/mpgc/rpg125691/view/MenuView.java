@@ -10,6 +10,7 @@ public class MenuView {
 
     public MenuView(Runnable onNewGame, Runnable onLoadGame, Runnable onSaveGame, Runnable onCharacter, Runnable onQuests, Runnable onInventory, Runnable onBattle) {
         this.root = new VBox(10);
+        this.root.getStyleClass().add("menu-panel");
         this.root.setPadding(new Insets(15));
         this.root.setPrefWidth(180);
 

@@ -17,7 +17,10 @@ public class QuestView {
         this.root = new VBox(10);
         this.root.setPadding(new Insets(15));
 
-        root.getChildren().add(new Label("Available Quests"));
+        Label title = new Label("Quests");
+        title.getStyleClass().add("section-title");
+
+        root.getChildren().add(title);
 
         if (quests.isEmpty()) {
             root.getChildren().add(new Label("No available quests."));

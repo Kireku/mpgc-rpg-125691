@@ -13,8 +13,11 @@ public class CharacterView {
         this.root = new VBox(10);
         this.root.setPadding(new Insets(15));
 
+        Label title = new Label("Character");
+        title.getStyleClass().add("section-title");
+
         root.getChildren().addAll(
-                new Label("Character"),
+                title,
                 new Label("Name: " + player.getName()),
                 new Label("Class: " + player.getCharacterClass()),
                 new Label("Level: " + player.getLevel()),

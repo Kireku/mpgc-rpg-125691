@@ -1,6 +1,6 @@
 {
   "player": {
-    "characterClass": "MAGE",
+    "characterClass": "RANGER",
     "inventory": {
       "items": [
         {
@@ -18,15 +18,15 @@
       ]
     },
     "level": 1,
-    "experience": 0,
-    "gold": 0,
-    "name": "Hero",
+    "experience": 45,
+    "gold": 25,
+    "name": "B",
     "stats": {
-      "maxHealth": 75,
-      "currentHealth": 75,
-      "attack": 22,
-      "defense": 3,
-      "speed": 8
+      "maxHealth": 95,
+      "currentHealth": 93,
+      "attack": 16,
+      "defense": 5,
+      "speed": 10
     }
   },
   "quests": [
@@ -39,7 +39,7 @@
         "name": "Slime",
         "stats": {
           "maxHealth": 30,
-          "currentHealth": 30,
+          "currentHealth": 0,
           "attack": 6,
           "defense": 2,
           "speed": 2
@@ -47,7 +47,7 @@
       },
       "goldReward": 15,
       "experienceReward": 25,
-      "status": "AVAILABLE"
+      "status": "COMPLETED"
     },
     {
       "title": "Danger in the Woods",
