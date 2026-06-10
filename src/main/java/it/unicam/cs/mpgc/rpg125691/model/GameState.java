@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 public class GameState {
 
-    private PlayerCharacter player;
+    private final PlayerCharacter player;
     private final List<Quest> quests;
 
     public GameState(PlayerCharacter player) {

@@ -13,7 +13,6 @@ public class Enemy extends GameCharacter {
         this.experienceReward = experienceReward;
         this.goldReward = goldReward;
     }
-
     public int getExperienceReward() {
         return experienceReward;
     }

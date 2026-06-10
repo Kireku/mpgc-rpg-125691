@@ -16,6 +16,9 @@ public class Stats {
             if (attack < 0 || defense < 0 || speed < 0) {
                 throw new IllegalArgumentException("stats must be non-negative");
             }
+            if(currentHealth > maxHealth || currentHealth < 0) {
+                throw new IllegalArgumentException("currentHealth must be between 0 and maxHealth");
+            }
             this.maxHealth = maxHealth;
             this.currentHealth = currentHealth;
             this.attack = attack;

@@ -109,7 +109,7 @@ public class MainController {
         try {
             gameService.startQuest(quest);
             mainView.appendLog("Quest started: " + quest.getTitle());
-            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
+            showCurrentBattle();
         } catch (IllegalStateException e) {
             mainView.appendLog(e.getMessage());
         }
@@ -117,7 +117,7 @@ public class MainController {
 
     public void handleShowBattle() {
         try {
-            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
+            showCurrentBattle();
         } catch (IllegalStateException e) {
             mainView.appendLog("Start or load a game first.");
         }
@@ -127,6 +127,11 @@ public class MainController {
         try {
             BattleTurnResult result = gameService.executeBattleAction(action);
             mainView.appendLog(result.getMessage());
+
+            if (!result.isBattleOver()) {
+                showCurrentBattle();
+                return;
+            }
 
             if (result.getBattleResult() == BattleResult.PLAYER_WIN) {
                 mainView.appendLog("Quest completed.");
@@ -143,13 +148,15 @@ public class MainController {
             if (result.getBattleResult() == BattleResult.ESCAPED) {
                 mainView.appendLog("You escaped from the battle.");
                 mainView.showQuests(gameService.getAvailableQuests());
-                return;
             }
-
-            mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
         } catch (IllegalStateException e) {
             mainView.appendLog(e.getMessage());
         }
+    }
+
+
+    private void showCurrentBattle() {
+        mainView.showBattle(gameService.getCurrentGameState().getPlayer(), gameService.getActiveQuest());
     }
 
 }

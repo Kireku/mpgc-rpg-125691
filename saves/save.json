@@ -1,6 +1,6 @@
 {
   "player": {
-    "characterClass": "WARRIOR",
+    "characterClass": "MAGE",
     "inventory": {
       "items": [
         {
@@ -20,13 +20,13 @@
     "level": 1,
     "experience": 0,
     "gold": 0,
-    "name": "A",
+    "name": "Hero",
     "stats": {
-      "maxHealth": 120,
-      "currentHealth": 120,
-      "attack": 18,
-      "defense": 8,
-      "speed": 4
+      "maxHealth": 75,
+      "currentHealth": 75,
+      "attack": 22,
+      "defense": 3,
+      "speed": 8
     }
   },
   "quests": [
