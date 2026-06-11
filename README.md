@@ -20,6 +20,11 @@ ottenendo ricompense, gestire un inventario e salvare o caricare lo stato della 
 * Salvataggio e caricamento della partita.
 * Interfaccia grafica JavaFx con tema RPG.
 
+### Istruzioni
+git clone https://github.com/Kireku/mpgc-rpg-125691.git
+
+cd mpgc-rpg-125691
+
 ### Requisiti
 Per compilare ed eseguire il progetto è necessario avere installato:
 * JDK 25;
